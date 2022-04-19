@@ -1,5 +1,5 @@
 ---
-title: "The Covid-19 vaccination policy did not solve vaccination inequities: a nationwide longitudinal study on 64.5 million individuals"
+title: "The French Covid-19 vaccination policy did not solve vaccination inequities: a nationwide longitudinal study on 64.5 million individuals"
 author: "F. Débarre, E. Lecoeur, L. Guimier, M. Jauffret-Roustide, A.-S. Jannot"
 output:
   bookdown::pdf_document2:
