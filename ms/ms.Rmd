@@ -2,11 +2,14 @@
 title: "The Covid-19 vaccination policy did not solve vaccination inequities: a nationwide longitudinal study on 64.5 million individuals"
 author: "F. Débarre, E. Lecoeur, L. Guimier, M. Jauffret-Roustide, A.-S. Jannot"
 output:
-  pdf_document: 
+  bookdown::pdf_document2:
     keep_tex: yes
     latex_engine: pdflatex
     includes:
       in_header: template.tex
+    fig_caption: yes
+    number_sections: no
+    toc: no
   bookdown::html_document2:
     self_contained: no
     keep_md: true
@@ -61,7 +64,7 @@ No conflict of interest to disclose
 ## Data sources
 -  Assurance Maladie: <https://datavaccin-covid.ameli.fr/explore/dataset/donnees-devaccination-par-epci/> <https://datavaccin-covid.ameli.fr/explore/dataset/donnees-de-vaccination-parcommune/information/>
 -  INSEE: <https://www.insee.fr/fr/statistiques/5359146#consulter>
-
+-  2017 Presidential election: <https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-1er-tour-par-communes/#resource-d282e53a-d273-425d-95bb-8a0d7632c79a-header>
 
 # Abstract
 
@@ -127,7 +130,7 @@ For each date, we determined a significance threshold by computing odds ratios o
 
 For representative indicators among the most statistically significantly associated ones, we estimated standardized vaccination rates among adults over time, for each decile of each indicator (treated as a factor). These estimations were obtained from a logistic model taking age class into account; adult vaccination rates were standarsized using an age distribution matching that of mainland France. 
 
-All analysis code is available at XXX; analyses were done in `r R.Version()$version.string`. 
+All analysis code is available at \url{https://github.com/flodebarre/covid-passports-france} (and will be stored on a permanent repository upon acceptance); analyses were done in `r R.Version()$version.string`. 
 
 
 
