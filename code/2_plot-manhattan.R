@@ -23,7 +23,7 @@ plotManhattan <- function(out, qq = 0.99, ntop = 3){
   thedates <- sort(unique(out$thedate))
   
   # xMax value
-  xMax <- 1.05 * max(out$OR.abs.CI.max)
+  xMax <- 1.075 * max(out$OR.abs.CI.max)
   
   for(thedate in thedates){
     # Subsets of the data at this date
