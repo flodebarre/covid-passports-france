@@ -2,6 +2,13 @@
 title: "The French Covid-19 vaccination policy did not solve vaccination inequities: a nationwide longitudinal study on 64.5 million individuals"
 author: "F. Débarre, E. Lecoeur, L. Guimier, M. Jauffret-Roustide, A.-S. Jannot"
 output:
+  bookdown::word_document2: 
+    number_sections: no
+    toc: no
+  bookdown::html_document2:
+    self_contained: no
+    keep_md: true
+    number_sections: no
   bookdown::pdf_document2:
     keep_tex: yes
     latex_engine: pdflatex
@@ -10,13 +17,8 @@ output:
     fig_caption: yes
     number_sections: no
     toc: no
-  bookdown::html_document2:
-    self_contained: no
-    keep_md: true
-    number_sections: no
-  bookdown::word_document2: 
-    number_sections: no
 bibliography: VaccinationInequalities.bib
+csl: vancouver.csl
 ---
 
 ```{r setup, include=FALSE}
