@@ -1,0 +1,133 @@
+---
+title: "The French Covid-19 vaccination policy did not solve vaccination inequities: a nationwide longitudinal study on 64.5 million individuals"
+author: "F. Débarre, E. Lecoeur, L. Guimier, M. Jauffret-Roustide, A.-S. Jannot"
+output:
+  bookdown::pdf_document2:
+    keep_tex: yes
+    latex_engine: pdflatex
+    includes:
+      in_header: template.tex
+    fig_caption: yes
+    number_sections: no
+    toc: no
+  bookdown::html_document2:
+    self_contained: no
+    keep_md: true
+    number_sections: no
+  bookdown::word_document2: 
+    number_sections: no
+    toc: no
+bibliography: VaccinationInequalities.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library("mapsf")
+
+load("../code/outsavevalues.RData")
+load("../code/data_indicators.RData") 
+```
+
+<!-- Other data -->
+
+```{r, echo = FALSE}
+insee.indicators.names <- names(typesDataAll)[!is.element(names(typesDataAll), c("Geography", "Elections"))]
+
+tb <- typesDataNoCorr[!is.element(names(typesDataNoCorr), c("Geography", "Elections"))]
+output.INSEE <- ""
+for(i in 1:length(tb)) output.INSEE <- paste0(output.INSEE, names(tb)[i], ": n = ", tb[i], "; ")
+output.INSEE <- substr(output.INSEE, 1, nchar(output.INSEE)-2)
+```
+
+```{r loadData_outLR, echo = FALSE}
+load("../data/predictors.RData")
+load("../code/outLR.RData")
+
+# Extract OR values for the most associated variables
+tmp <- outLR[outLR$varPred == "Asselineau", ]
+maxAsselineau <- tmp[order(tmp$OR.abs, decreasing = TRUE), ][1, ]
+
+tmp <- outLR[outLR$varPred == "Unemployment_Benef", ]
+maxUnemployment_Benef <- tmp[order(tmp$OR.abs, decreasing = TRUE), ][1, ]
+
+tmp <- outLR[outLR$varPred == "Immigrant", ]
+maxImmigrant <- tmp[order(tmp$OR.abs, decreasing = TRUE), ][1, ]
+
+tmp <- outLR[outLR$varPred == "NO.SE", ]
+maxNOSE <- tmp[order(tmp$OR.abs, decreasing = TRUE), ][1, ]
+
+tmp <- outLR[outLR$varPred == "Overcrowding_rate", ]
+maxOvercrowding_rate <- tmp[order(tmp$OR.abs, decreasing = TRUE), ][1, ]
+
+roundOR <- 3 # Number of decimals for OR
+
+```
+
+```{r exportSuppTable, eval = FALSE}
+# Done only once
+
+# Extract only key columns
+tmp <- outLR[, c("varPred", "typePredFull", "thedate", "OR", "OR.CI.min", "OR.CI.max")]
+# Rename the columns
+names(tmp) <- c("predictor", "class of predictor", "date", "OR", "OR CI min", "OR CI max")
+
+# Save as csv
+write.csv(tmp, file = "../ms/SuppTable_OR.csv", row.names = FALSE)
+```
+
+
+
+
+```{r figManhattan, echo=FALSE, fig.height=9, fig.width=10, fig.cap="Manhattan plots of the Odds ratios for each of the indicator of our dataset, by date. Left column: around the Sanitary Pass implementation; right column: around the Vaccine Pass implementation. The top odds ratios are labelled at each time point; the symbol next to the name indicates the direction of the effect. The gray rectangle corresponds to the 99% percentile of odds ratios in the permuted data; points falling in the rectangle are considered as non-significant."}
+source("../code/2_plot-manhattan.R")
+layout(matrix(1:6, ncol = 2))
+# PLOT
+plotManhattan(outLR, ntop = 5, renameLabels = TRUE)
+```
+
+```{r manhattanSingles, fig.height=5, fig.width=8}
+plotManhattan(outLR, ntop = 5)
+```
+
+```{r figOverTime, fig.height=8, fig.width=4, fig.cap="Age-adjusted vaccination rates among adults, over time, by decile of each indicator (presented by a color gradient). The vertical lines indicate the dates of announcements and implementations of the sanitary and vaccine passes.", echo = FALSE}
+load("../code/outTime.RData")
+source("../code/2_plot-overTime.R")
+layout(matrix(1:3, ncol = 1))
+plotPropTime(outA, plotDates = TRUE, plotGraduations = TRUE)
+```
+
+```{r overTimeSingles, fig.height=4, fig.width=6}
+plotPropTime(outA, plotDates = TRUE, plotGraduations = TRUE)
+```
+
+```{r figMap, fig.height=5, fig.width=4, fig.cap="Adult vaccination rates by district of mainland France", echo = FALSE}
+source("../code/2_plot-map.R")
+source("../code/1_functions-adjustAges.R")
+load("../data/mapFiles_withDepReg.RData")
+load("../data/mapchefslieux.RData")
+# Choose date
+thedate <- datesAnalysis[6]
+# Vaccination data by age at that date
+tmpVacc <- vacc[vacc$date == thedate & vacc$classe_age != "TOUT_AGE", ]
+#tmpVacc2 <- vacc[vacc$date == thedate & vacc$classe_age == "TOUT_AGE", ]
+#tmpVacc2$taux_cumu <- tmpVacc2$taux_cumu_1_inj
+
+# Compute adult vaccination rate
+adultVaccinationRate <- adultVacc(tmpVacc)
+
+
+#plotMapVacc(adultVaccinationRate, thetitle = paste0("Adult vaccination rates on ", thedate), palName = "Hiroshige", byp = 5)
+
+# Compute mean vaccination rate
+meanVacc <- sum(adultVaccinationRate$n_cumu) / sum(adultVaccinationRate$population_carto)
+# Compute difference to max to center the color scale
+maxDiff <- max(c(max(adultVaccinationRate$taux_cumu) - meanVacc, meanVacc - min(adultVaccinationRate$taux_cumu)))
+
+plotMapVacc(adultVaccinationRate, thetitle = paste0("Adult vaccination rates on ", thedate), palName = "Cassatt2", byp = 2, zmin = floor(100*(meanVacc - maxDiff)), zmax = ceiling(100*(meanVacc + maxDiff)))
+
+#plotMapVacc(tmpVacc2, thetitle = paste0("Adult vaccination rates on ", date6))
+
+```
+
+

@@ -14,10 +14,11 @@ colPerm <- gray(0, 0.4)
 
 #...............................................................................
 # Manhattan plot
-plotManhattan <- function(out, qq = 0.99, ntop = 3){
+plotManhattan <- function(out, qq = 0.99, ntop = 3, renameLabels = FALSE){
   # out is the output table, containing ORs and the parameters
   # qq quantile for the permuted values
   # ntop is number of labels to plot
+  # renameLabels is a boolean indicating whether to rename the labels
   
   # Extract date values
   thedates <- sort(unique(out$thedate))
@@ -68,9 +69,17 @@ plotManhattan <- function(out, qq = 0.99, ntop = 3){
     
     # Label the most important values
     tmp <- subF[order(subF$OR.abs, decreasing = TRUE), ][1:ntop, ]
-    # Remove X if any
-    iX <- which(substr(tmp$varPred, 1, 1) == "X")
-    tmp[iX, "varPred"] <- vapply(tmp[iX, "varPred"], FUN = function(x) substr(x, 2, nchar(x)), FUN.VALUE = "x")
+    
+    if(renameLabels){
+      dico0 <- read.csv("../data/dicoMainVarNames.csv")
+      dico <- dico0$longName
+      names(dico) <- dico0$varPred
+      tmp$varPred <- dico[tmp$varPred]
+    }else{
+      # Remove X if any
+      iX <- which(substr(tmp$varPred, 1, 1) == "X")
+      tmp[iX, "varPred"] <- vapply(tmp[iX, "varPred"], FUN = function(x) substr(x, 2, nchar(x)), FUN.VALUE = "x")
+    }
     
     arrs <- rep("(+)", ntop)
     arrs[tmp$OR < 1] <- "(-)"
