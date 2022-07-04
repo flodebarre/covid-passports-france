@@ -120,8 +120,39 @@ tmp$`OR CI min` <- round(tmp$`OR CI min`, digits = dgt)
 tmp$`OR CI max` <- round(tmp$`OR CI max`, digits = dgt)
 
 
+# Format in wide format
+#  Initialize output table
+supptab <- data.frame(predictor = sort(unique(tmp$predictor)))
+supptab$`class of predictor` <- NA
+for(thedate in dates){
+  supptab[, thedate] <- NA
+}
+prefixORcol <- "OR_(signif)_" # Prefix of the OR columns
+names(supptab)[2 + seq_along(dates)] <- paste0(prefixORcol, names(supptab)[2 + seq_along(dates)])
+
+# For each line, i.e. for each predictor
+for(i in seq_len(nrow(supptab))){
+  # Subset of the data for this predictor
+  sub <- tmp[tmp$predictor == supptab[i, "predictor"], ]
+  supptab[i, "class of predictor"] <- unique(sub$`class of predictor`) # Add info on predictor class
+  
+  # Add info on OR at specific dates
+  for(j in 1:length(dates)){
+    thedate <- dates[j]
+    subb <- sub[sub$date == thedate, ] # Subset of the data for this date
+    signif <- ifelse(subb$significant, "*", "-") # Sign for significativity 
+    supptab[i, paste0(prefixORcol, thedate)] <- paste0(subb$OR, " (", signif, ")")
+  }
+}
+
+# Remove "X" at start of name
+iX <- which(substr(supptab$predictor, 1, 1) == "X") # Lines with "X"
+supptab[iX, "predictor"] <- vapply(supptab[iX, "predictor"], FUN = function(x) substr(x, 2, nchar(x)), FUN.VALUE = "x") # Remove "X" on these lines
+
+supptab
+
 # Save as csv
-write.csv(tmp, file = "../ms/SuppTable_OR.csv", row.names = FALSE)
+write.csv(supptab, file = "../ms/SuppTable_OR_wide.csv", row.names = FALSE)
 
 ```
 
