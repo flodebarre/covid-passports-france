@@ -75,6 +75,26 @@ names(tmp) <- c("predictor", "class of predictor", "date", "OR", "OR CI min", "O
 
 # Save as csv
 write.csv(tmp, file = "../ms/SuppTable_OR.csv", row.names = FALSE)
+
+
+
+# Compute permutation values
+qq <- 0.99 # quantile for the permutations
+dates <- unique(outLR$thedate) # values of the dates
+qperm <- rep(NA, length(dates)) # initialize output
+
+for(idate in seq_along(dates)){
+  thedate <- dates[idate]
+  # Subset of the data for the permutation tests
+  subT <- outLR[outLR$thedate == thedate & outLR$permutation == TRUE, ]
+  # Compute quantile
+  xq <- quantile(subT$OR.abs, probs = qq)
+  qperm[idate] <- xq
+}
+
+tmp.perm <- data.frame(date = dates, q99 = qperm)
+tmp.perm
+
 ```
 
 
