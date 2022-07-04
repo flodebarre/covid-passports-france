@@ -95,6 +95,34 @@ for(idate in seq_along(dates)){
 tmp.perm <- data.frame(date = dates, q99 = qperm)
 tmp.perm
 
+write.csv(tmp.perm, file = "../ms/SuppTable_ORpermutations99.csv", row.names = FALSE)
+
+# Combine the two in a single table
+#  New column to store the result
+tmp$significant <- NA
+tmp$OR_permutation <- NA
+
+for(i in seq_len(nrow(tmp))){
+  # Sort CI values
+  tmp[i, c("OR CI min", "OR CI max")] <- sort(tmp[i, c("OR CI min", "OR CI max")])
+  # Test significativity
+  ORabs <- max(tmp[i, "OR"], 1/tmp[i, "OR"])
+  ORref <- tmp.perm[tmp.perm$date == tmp[i, "date"], "q99"]
+  if(ORabs > ORref) tmp[i, "significant"] <- TRUE
+  if(ORabs < ORref) tmp[i, "significant"] <- FALSE
+  tmp[i, "OR_permutation"] <- ORref
+}
+
+# Round the values
+dgt <- 3
+tmp$OR <- round(tmp$OR, digits = dgt)
+tmp$`OR CI min` <- round(tmp$`OR CI min`, digits = dgt)
+tmp$`OR CI max` <- round(tmp$`OR CI max`, digits = dgt)
+
+
+# Save as csv
+write.csv(tmp, file = "../ms/SuppTable_OR.csv", row.names = FALSE)
+
 ```
 
 
