@@ -68,9 +68,8 @@ roundOR <- 3 # Number of decimals for OR
 # Done only once
 
 # Extract only key columns
-tmp <- outLR[, c("varPred", "typePredFull", "thedate", "OR", "OR.CI.min", "OR.CI.max")]
-# Remove the lines corresponding to permutations
-tmp <- tmp[tmp$permutation == FALSE, ]
+# and remove the lines corresponding to permutations
+tmp <- outLR[outLR$permutation == FALSE, c("varPred", "typePredFull", "thedate", "OR", "OR.CI.min", "OR.CI.max")]
 # Rename the columns
 names(tmp) <- c("predictor", "class of predictor", "date", "OR", "OR CI min", "OR CI max")
 
