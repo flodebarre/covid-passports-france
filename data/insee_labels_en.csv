@@ -1,0 +1,313 @@
+Predictor;Label;Unity
+1ry_res;Rate of main residences;%
+2ry_res;Rate of secondary residences;%
+Vacant_Home;Vacant housing rate;%
+Houses;Rates of houses;%
+Flats;Apartment rates;%
+Nb_Rooms_1ry_res;Average number of rooms in main residences;Rooms
+House_1ry_res;Rate of houses among main residences;%
+Flat_1ry_res;Rate of apartments among main residences;%
+1ry_res_bf_1919;Rate of main residences built before 1919;%
+1ry_res_19.45;Rate of main residences built before between 1919 and 1945;%
+1ry_res_46.70;Rate of main residences built before between 1946 and 1970;%
+1ry_res_71.90;Rate of main residences built before between 1971 and 1990;%
+1ry_res_91.05;Rate of main residences built before between 1991 and 2005;%
+1ry_res_06.15;Rate of main residences built before between 2006 and 2015;%
+HH_Moving_Time_lt2y;Rate of households having moved in less than 2 years ago;%
+HH_Moving_Time_2to4y;Rate of households having moved in between 2 and 4 years ago;%
+HH_Moving_Time_5to9y;Rate of households having moved in between 5 and 9 years ago;%
+HH_Moving_Time_10to19y;Rate of households having moved in between 10 and 19 years ago;%
+HH_Moving_Time_20to29y;Rate of households having moved in between 20 and 29 years ago;%
+HH_Moving_Time_gt30y;Rate of households having moved in for more than 30 years;%
+1ry_res_Owner;Rate of owner households;%
+1ry_res_Tenant;Rate of tenant households (excluding public housing);%
+1ry_res_Social;Rate of tenant households (public housing);%
+1ry_res_FreeAcc;Rate of households housed free of charge;%
+1ry_res_Carpark;Rate of main residences with a reserved parking space;%
+1ry_res_0car;Rate of households without a car;%
+1ry_res_1car;Rate of households owning 1 car;%
+1ry_res_2car;Rate of households owning 2 car;%
+1ry_res_3.car;Rate of households owning 3 or more cars;%
+Pop_per_1ry_res;Average number of people per household;People
+1ry_res_gt0car;Rate of households owning at least 1 car;%
+Pop_per_1ry_res_Owner;Average number of people per owner household;%
+Pop_per_1ry_res_Tenant;Average number of people per tenant household (excluding public housing);People
+Pop_per_1ry_res_Social;Average number of people per tenant household (public housing);People
+Pop_per_1ry_res_FreeAcc;Average number of people per household housed free of charge;People
+1ry_res_Occupancy;Average duration of occupation of main residence;Years
+Owners_Occupancy;Average tenure of main residence owners;Years
+Tenant_Occupancy;Average duration of occupancy of tenants (excluding public housing) of main residence;Years
+Social_Occupancy;Average duration of occupancy of tenants (public housing) of main residence;Years
+FreeAcc_Occupancy;Average duration of occupation of people housed free of charge in their main residence;Years
+Overcrowding_rate;Overcrowding rate;Years
+X1564_Workforce_rate;15-64 years workforce rate among population of the same age group;%
+X1524_Workforce_rate;15-24 years workforce rate among population of the same age group;%
+X2554_Workforce_rate;25-54 years workforce rate among population of the same age group;%
+X5564_Workforce_rate;55-65 years workforce rate among population of the same age group;%
+X1564_men_Workforce_rate;15-64 years men workforce rate among men of the same age group;%
+X1524_men_Workforce_rate;15-24 years men workforce rate among men of the same age group;%
+X2554_men_Workforce_rate;25-54 years men workforce rate among men of the same age group;%
+X5564_men_Workforce_rate;55-64 years men workforce rate among men of the same age group;%
+X1564_women_Workforce_rate;15-64 years women workforce rate among women of the same age group;%
+X1524_women_Workforce_rate;15-24 years women workforce rate among women of the same age group;%
+X2554_women_Workforce_rate;25-54 years women workforce rate among women of the same age group;%
+X5564_women_Workforce_rate;55-64 years women workforce rate among women of the same age group;%
+X1564_Employed_rate_amg_WF;15-64 years employed workforce rate among population workforce of the same age group;%
+X1524_Employed_rate_amg_WF;15-24 years employed workforce rate among population workforce of the same age group;%
+X2554_Employed_rate_amg_WF;25-54 years employed workforce rate among population workforce of the same age group;%
+X5564_Employed_rate_amg_WF;55-64 years employed workforce rate among population workforce of the same age group;%
+X1564_men_Employed_rate_amg_WF;15-64 years men employed workforce among men workforce of the same age group;%
+X1524_men_Employed_rate_amg_WF;15-24 years men employed workforce among men workforce of the same age group;%
+X2554_men_Employed_rate_amg_WF;25-54 years men employed workforce among men workforce of the same age group;%
+X5564_men_Employed_rate_amg_WF;55-64 years men employed workforce among men workforce of the same age group;%
+X1564_women_Employed_rate_amg_WF;15-64 years women employed workforce among women workforce of the same age group;%
+X1524_women_Employed_rate_amg_WF;15-24 years women employed workforce among women workforce of the same age group;%
+X2554_women_Employed_rate_amg_WF;25-54 years women employed workforce among women workforce of the same age group;%
+X5564_women_Employed_rate_amg_WF;55-64 years women employed workforce among women workforce of the same age group;%
+X1564_Unemployed_rate_amg_WF;15-64 years unemployed workforce among population workforce of the same age group;%
+X1524_Unemployed_rate_amg_WF;15-24 years unemployed workforce among population workforce of the same age group;%
+X2554_Unemployed_rate_amg_WF;25-54 years unemployed workforce among population workforce of the same age group;%
+X5564_Unemployed_rate_amg_WF;55-64 years unemployed workforce among population workforce of the same age group;%
+X1564_NonWorking_amg_WF;15-64 years non-working population among population of the same age group;%
+X1564_Student_amg_WF;15-64 years studying population among non-working population of the same age group;%
+X1564_Retired_amg_WF;15-64 years retired population among non-working population of the same age group;%
+X1564_OtherInactive_amg_WF;15-64 years other inactive population among non-working population of the same age group;%
+X1564_men_Unemplyed_amg_WF;15-64 years unemployed men among men workforce of the same age group;%
+X1564_women_Unemplyed_amg_WF;15-64 years unemployed women among women workforce of the same age group;%
+X1564_Student_amg_NW;15-64 years studying population among non-working population of the same age group;%
+X1564_Retired_amg_NW;15-64 years retired population among non-working population of the same age group;%
+X1564_OtherInactive_amg_NW;15-64 years other inactive population among non-working population of the same age group;%
+X1564_NonWorking_amg_POP;15-64 years non-working population among population of the same age group;%
+X1564_Farmers_amg_WF;Farmer operators rate among 15-64 years population workforce;%
+X1564_CraftsBusinessShopkeepers_amg_WF;Craftsmen, businessmen, shopkeepers rate among 15-64 years population workforce;%
+X1564_HihgQualWorkers_amg_WF;Highly qualified worker among 15-64 years population workforce;%
+X1564_IntermediateProf_amg_WF;Intermediate professions rate among 15-64 years population workforce;%
+X1564_BlueCollar_amg_WF;Blue collar unskilled workers rate among 15-64 years population workforce;%
+X1564_WhiteCollar_amg_WF;White collar unskilled workers rate among 15-64 years population workforce;%
+X1564_Farmers_amg_EmpWF;Farmer operators rate among 15-64 years population employed workforce;%
+X1564_CraftsBusinessShopkeepers_amg_EmpWF;Craftsmen, businessmen, shopkeepers rate among 15-64 years population employed workforce;%
+X1564_HihgQualWorkers_amg_EmpWF;Highly qualified worker among 15-64 years population employed workforce;%
+X1564_IntermediateProf_amg_EmpWF;Intermediate professions rate among 15-64 years population employed workforce;%
+X1564_BlueCollar_amg_EmpWF;Blue collar unskilled workers rate among 15-64 years population employed workforce;%
+X1564_WhiteCollar_amg_EmpWF;White collar unskilled workers rate among 15-64 years population employed workforce;%
+X15._men_amg_empWF;Men rate among employed workforce over 15 years;%
+X15._women_amg_empWF;Women rate among employed workforce over 15 years;%
+X15._Salaried_amg_empWF;Salaried employees rate among employed workforce over 15 years;%
+X15._NonSalaried_amg_empWF;Non-salaried employees rate among employed workforce over 15 years;%
+X15._FullTime_amg_empWF;Full-time employees rate among employed workforce over 15 years;%
+X15._men_amg_salWF;Men rate among salaried workforce over 15 years;%
+X15._women_amg_salWF;Women rate among salaried workforce over 15 years;%
+X15._men_amg_nonsalWF;Men rate among non-salaried workforce over 15 years;%
+X15._women_amg_nonsalWF;Women rate among non-salaried workforce over 15 years;%
+X15._men_amg_FullTimeWF;Men rate among full-time salaried workforce over 15 years;%
+X15._women_amg_FullTimeWF;Women rate among full-time salaried workforce over 15 years;%
+X15._FullTime_amg_salWF;Full-time rate among salaried workforce over 15 years;%
+SinglePerson_HH;Single person household rate;%
+SingleMan_HH;Single men household rate;%
+SingleWoman_HH;Single women household rate;%
+OtherNoFamily_HH;Other household without family rate;%
+Family_HH;Household with a family rate;%
+NoChildFamily_HH;Household with a child-free family rate;%
+ChildFamily_HH;Houhold with a family with children rate;%
+SingleParent_HH;Household with a single-parent family rate;%
+Farmer_HH;Rate of household with farmer operators household head;%
+CraftsBusinessShopkeepers_HH;Rate of household with craftsmen, businessmen, shopkeepers household head;%
+HighQualidied_HH;Rate of household with highly qualified occupation household head;%
+Intermediate_HH;Rate of household with intermediate professions household head;%
+BlueCollar_HH;Rate of household with blue collar unskilled workers household head;%
+WhiteCollar_HH;Rate of household with white collar unskilled workers household head;%
+Retired_HH;Rate of household with retirees household head;%
+Other_HH;Rate of household with other activities household head;%
+X15._SinglePerson_HH;Rate of persons among population over 15 years living in single person household;%
+Pop_SingleMan_HH;Rate of persons among population over 15 years living in single men household;%
+Pop_SingleWoman_HH;Rate of persons among population over 15 years living in single women household;%
+Pop_OtherNoFamily_HH;Rate of persons among population over 15 years living in other household without family;%
+Pop_Family_HH;Rate of persons among population over 15 years living in household with a family;%
+Pop_NoChildFamily_HH;Rate of persons among population over 15 years living in household with a child-free family;%
+Pop_ChildFamily_HH;Rate of persons among population over 15 years living in household with a family with children;%
+Pop_SingleParent_HH;Rate of persons among population over 15 years living in household with a single-parent family;%
+Pop_Farmer_HH;Rate of persons among population over 15 years living with a farmer operators household head ;%
+Pop_CraftsBusinessShopkeepers_HH;Rate of persons among population over 15 years living with craftsmen, businessmen, shopkeepers household head;%
+Pop_HighQualidied_HH;Rate of persons among population over 15 years living with a highly qualified occupation household head;%
+Pop_Intermediate_HH;Rate of persons among population over 15 years living with an intermediate professions household head;%
+Pop_BlueCollar_HH;Rate of persons among population over 15 years living with a blue collar unskilled workers household head;%
+Pop_WhiteCollar_HH;Rate of persons among population over 15 years living with a white collar unskilled workers household head;%
+Pop_Retired_HH;Rate of persons among population over 15 years living with a retirees household head;%
+Pop_Other_HH;Rate of persons among population over 15 years living with other activities household head;%
+X1524_amg_15.POP;15-24 years rate among population over 15 years;%
+X2554_amg_15.POP;25-54 years rate among population over 15 years;%
+X5579_amg_15.POP;55-79 years rate among population over 15 years;%
+X80._amg_15.POP;over 80 years rate among population over 15 years;%
+X15._Single_amg_POP;Singles rate among population over 15 years;%
+X15._Married_amg_POP;Married persons rate among population over 15 years;%
+X15._nonMarried_amg_POP;Non-married persons rate among population over 15 years;%
+X1524_amg_HH;15-24 years rate among household population over 15 years ;%
+X2554_amg_HH;25-54 years rate among household population over 15 years;%
+X5579_amg_HH;55-79 years rate among household population over 15 years;%
+X80._amg_HH;Over 80 years rate among household population over 15 years;%
+X1524_amg_Single;15-24 years rate among single person households;%
+X2554_amg_Single;25-54 years rate among single person households;%
+X5579_amg_Single;55-79 years rate among single person households;%
+X80._amg_Single;Over 80 years rate among single person households;%
+Family_w_Children_amg_HH;Family with children rate among family households;%
+Single_Parent_Family_amg_HH;Single parent family rate among family households;%
+Family_wo_Children_amg_HH;Family without children rate among family households;%
+D1_st_Living;First decile of standard of living;%
+Median_st_Living;Median standard of living;€
+D9_st_Living;Ninth decile of standard of living;€
+Interdecile_91_Ratio;Interdecile ratio 9th decile/1st decile;€
+Taxable_HH;Share of taxed tax households;
+Poverty_amg_Owners;Poverty rate among owners;%
+Poverty_amg_Tenants;Poverty rate among tenants;%
+X.30_Poverty;Poverty rate among people under 30;%
+X3039_Poverty;Poverty rate among 30-39 year olds;%
+X4049_Poverty;Poverty rate among 40-49 year olds;%
+X5059_Poverty;Poverty rate among 50-59 year olds;%
+X6074_Poverty;Poverty rate among 60-74 year olds;%
+X75._Poverty;Poverty rate among the over 75s;%
+Poverty;Poverty rate;%
+Activity_Income;Share of activity in income;%
+Salary_Income;Share of wages or salaries excluding unemployment benefits in income;%
+Unemployment_Benef;Share of unemployment benefits in income;%
+Self.Employment;Share of income from self-employed activities in income;%
+Pensions_Annuities;Share of pensions, retirements and annuities in income;%
+Estate;Share of income from assets and other income in income;%
+Social_Benef;Share of all social benefits in income;%
+Family_Benef;Share of family benefits;%
+Social_Minima;Share of social minima;%
+Housing_Benef;Share of housing benefits;%
+Tax;Share of taxes;%
+Wk_Res_Municipality;Proportion of the active population working in the municipality of residence;%
+Wk_Res_County.Municipality;Proportion of the active population who works in another municipality of the county of residence;%
+Wk_Res_Region.County;Proportion of the active population who works in another county of the region of residence;%
+Wk_Res_Country.Region;Percentage of the active population who works in another region of metropolitan France;%
+Wk_Dom_Com_Abroad;Percentage of the active population who works out of metropolitan France (overseas counties and territories, abroad);%
+noTransport_toWk;Proportion of the working population that does not travel to work;%
+Walk_toWk;Proportion of the active population who go to work while walking;%
+Bike_toWk;Proportion of the working population who cycle to work;%
+Motorbike_toWk;Proportion of the working population who go to work on motorized two-wheelers;%
+Drive_toWk;Share of the working population that goes to work by car, truck or van;%
+PublicTrans_toWk;Share of the population that goes to work by public transport;%
+X15._Men_amg_salWF;Proportion of the population that goes to work by public transport Proportion of men over 15 in the salaried population of the same age;%
+X15._Women_amg_salWF;Share of women over 15 in the employed population of the same age;%
+X15._PermanentContract_amg_salWF;Percentage of employees over 15 years old on permanent contracts or public service holders;%
+X15._ShortTermContract_amg_salWF;Proportion of employees over 15 years of age on fixed-term contracts or short, seasonal, temporary contracts, etc.;%
+X15._InterimContract_amg_salWF;Percentage of employees aged over 15 placed by a temporary agency;%
+X15._SubsidizedWork_amg_salWF;Proportion of employees over 15 years of age on subsidized contracts;%
+X15._ApprenticeContract_amg_salWF;Proportion of employees on apprenticeship contracts;%
+X15._SelfEmployed_amg_nonsalWF;Proportion of the non-salaried active population represented by the self-employed;%
+X15._Employers_amg_nonsalWF;Proportion of the non-salaried labor force represented by employers;%
+X15._caregivers_amg_nonsalWF;Proportion of the non-salaried active population represented by family workers;%
+X0205_School;School enrollment rate among 2-5 year olds;%
+X0610_School;School enrollment rate among 6-10 year olds;%
+X1114_School;School enrollment rate among 11-14 year olds;%
+X1517_School;School enrollment rate among 15-17 year olds;%
+X1824_School;School enrollment rate among 18-24 year olds;%
+X2529_School;School enrollment rate among 25-29 year olds;%
+X30._School;School enrollment rate among the over 30s;%
+X15._NoDiploma_amg_WF;Proportion of the active population without a diploma;%
+X15._CertifGeneEducation_amg_WF;Proportion of the active population whose highest diploma is a undergraduate certificate, college certificate or National Certificate;%
+X15._VocationalGraduate_amg_WF;Proportion of the working population whose highest qualification is a vocational graduate or equivalent;%
+X15._HighSchoolGraduate_amg_WF;Percentage of the working population whose highest qualification is a high school graduate or equivalent;%
+X15._HSG.2_amg_WF;Proportion of the active population with the highest diploma is equivalent at 2 years after high school graduate;%
+X15._HSG.4_amg_WF;Proportion of the active population with the highest diploma is equivalent at 3 or 4 years after high school graduate;%
+X15._HSG.5._amg_WF;Proportion of the active population with the highest diploma is equivalent at 5 or more years after high school graduate;%
+X15._HighEducation_amg_WF;Proportion of the active population with a high education diploma;%
+X15._men_NoDiploma_amg_mWF;Proportion of the male working population without a diploma;%
+X15._men_VocationalGraduate_amg_mWF;Proportion of the male working population whose highest qualification is a vocational graduate or equivalent;%
+X15._men_HighSchoolGraduate_amg_mWF;Percentage of the male working population whose highest qualification is a high school graduate or equivalent;%
+X15._men_HighEducation_amg_mWF;Proportion of the male active population with a high education diploma;%
+X15._women_NoDiploma_amg_wWF;Proportion of the female working population without a diploma;%
+X15._women_VocationalGraduate_amg_wWF;Proportion of the female working population whose highest qualification is a vocational graduate or equivalent;%
+X15._women_HighSchoolGraduate_amg_wWF;Percentage of the female working population whose highest qualification is a high school graduate or equivalent;%
+X15._women_HighEducation_amg_wWF;Proportion of the female active population with a high education diploma;%
+X15._MenOnWomen_NoDiploma;Ratio of the male population without a diploma to the female population without a diploma;%
+X15._MenOnWomen_VocationalGraduate;Ratio of the male population with a vocational graduate to the female population with a vocational graduate;%
+X15._MenOnWomen_HighSchoolGraduate;Ratio of the male population with a high school graduate to the female population with a high school graduate;%
+X15._MenOnWomen_HighEducation;Ratio of the male population with a higher education diploma to the female population with a higher education diploma;%
+X0014_amg_POP;Share of under 14s;%
+X1529_amg_POP;share of 15-29 year olds;%
+X3044_amg_POP;share of 30-44 year olds;%
+X4559_amg_POP;share of 45-59 year olds;%
+X6074_amg_POP;share of 60-74 year olds;%
+X7589_amg_POP;share of 75-89 year olds;%
+X90._amg_POP;share of over 90s;%
+Men;share of men;%
+X0019_amg_POP;share of under 19s;%
+X2064_amg_POP;share of 20-64 year olds;%
+X65._amg_POP;share of over 65s;%
+X15._Farmers_amg_POP;Share of working farmers among the population aged over 15;%
+X15._CraftsBusinessShopkeeper_amg_POP;Proportion of craftsmen, traders or business leaders among the population aged over 15;%
+X15._ManagersHigherIntellectProf_amg_POP;Share of executives and higher intellectual professions among the population aged over 15;%
+X15._IntermediateProf_amg_POP;Share of intermediate professions among the population aged over 15;%
+X15._WhiteCollar_amg_POP;Share of employees among the population over 15 years old;%
+X15._BlueCollar_amg_POP;Proportion of blue-collar workers among the population aged over 15;%
+X15._Retired_amg_POP;Proportion of retirees among the population aged over 15;%
+X15._OtherNoActivity_amg_POP;Share of other people without professional activity among the population aged over 15;%
+X0014_men_amg_mPOP;Share of male population under 14;%
+X1529_men_amg_mPOP;Share of male population aged 15-29;%
+X3044_men_amg_mPOP;Share of male population aged 30-44;%
+X4559_men_amg_mPOP;Share of male population aged 45-59;%
+X6074_men_amg_mPOP;Share of male population aged 60-74;%
+X7589_men_amg_mPOP;Share of male population aged 75-89;%
+X90._men_amg_mPOP;Share of male population over 90 years old;%
+X0019_men_amg_mPOP;Share of male population under 19;%
+X2064_men_amg_mPOP;Proportion of the male population aged between 20 and 64;%
+X65._men_amg_mPOP;Share of male population aged over 65;%
+X15._men_Farmers_amg_mPOP;Share of working farmers among the male population over 15 years old;%
+X15._men_CraftsBusinessShopkeeper_amg_mPOP;Proportion of craftsmen, traders or business leaders among the male population over 15 years old;%
+X15._men_ManagersHigherIntellectProf_amg_mPOP;Share of executives and higher intellectual professions among the male population over 15;%
+X15._men_IntermediateProf_amg_mPOP;Share of intermediate professions among the male population over 15;%
+X15._men_WhiteCollar_amg_mPOP;Share of employees among the male population over 15 years old;%
+X15._men_BlueCollar_amg_mPOP;Share of manual workers among the male population over 15;%
+X15._men_Retired_amg_mPOP;Proportion of retirees among the male population over 15;%
+X15._men_OtherNoActivity_amg_POP;Share of other people without professional activity among the male population aged over 15;%
+X0014_women_amg_wPOP;Share of female population under 14;%
+X1529_women_amg_wPOP;Share of female population aged 15-29;%
+X3044_women_amg_wPOP;Share of female population aged 30-44;%
+X4559_women_amg_wPOP;Share of female population aged 45-59;%
+X6074_women_amg_wPOP;Share of female population aged 60-74;%
+X7589_women_amg_wPOP;Share of female population aged 75-89;%
+X90._women_amg_wPOP;Share of female population over 90 years old;%
+X0019_women_amg_wPOP;Share of female population under 19;%
+X2064_women_amg_wPOP;Proportion of the female population aged between 20 and 64;%
+X65._women_amg_wPOP;Share of female population aged over 65;%
+X15._women_Farmers_amg_wPOP;Share of working farmers among the female population over 15 years old;%
+X15._women_CraftsBusinessShopkeeper_amg_wPOP;Proportion of craftsmen, traders or business leaders among the female population over 15 years old;%
+X15._women_ManagersHigherIntellectProf_amh_wPOP;Share of executives and higher intellectual professions among the female population over 15;%
+X15._women_IntermediateProf_amg_wPOP;Share of intermediate professions among the female population over 15;%
+X15._women_WhiteCollar_amg_wPOP;Share of employees among the female population over 15 years old;%
+X15._women_BlueCollar_amg_wPOP;Share of manual workers among the female population over 15;%
+X15._women_Retired_amg_wPOP;Proportion of retirees among the female population over 15;%
+X15._women_OtherNoActivity_amg_wPOP;Share of other people without professional activity among the female population aged over 15;%
+French_nlty;French rate;%
+Stranger;Rate of foreigners;%
+Immigrant;Immigrant rate;%
+French_nlty_amg_Men;Proportion of French among the male population;%
+Stranger_amg_Men;Share of foreigners among the male population;%
+Immigrant_amg_Men;Share of immigrants among the male population;%
+French_nlty_amg_Women;Proportion of French among the female population;%
+Stranger_amg_Women;Share of foreigners among the female population;%
+Immigrant_amg_Women;Share of immigrants among the female population;%
+Res_Abroad_2017;Share of the population living abroad in 2017;%
+latitude;Latitude;°
+longitude;Longitude;°
+distanceParis;Distance to Paris;
+SO.NE;Projection on the first bisector of the coordinates;
+NO.SE;Projection on the second bisector of the coordinates;
+densite;Density;inhabitants per km sqare
+Abstention;Abstention rate in the first round of the 2017 presidential elections;%
+LePen;Percentage of votes cast for Ms. Le Pen in the first round of the 2017 presidential election;%
+Melenchon;Percentage of votes cast for Mr. Mélenchon in the first round of the 2017 presidential elections;%
+Macron;Percentage of votes cast for Mr. Macron in the first round of the 2017 presidential election;%
+Fillon;Percentage of votes cast for Mr. Fillon in the first round of the 2017 presidential elections;%
+DupontAignan;Percentage of votes cast for Mr. Dupont-Aignan in the first round of the 2017 presidential elections;%
+Lassalle;Percentage of votes cast for Mr. Lassalle in the first round of the 2017 presidential elections;%
+Hamon;Percentage of votes cast for Mr. Hamon in the first round of the 2017 presidential elections;%
+Asselineau;Percentage of votes cast for Mr. Asselineau in the first round of the 2017 presidential elections;%
+Poutou;Percentage of votes cast for Mr. Poutou in the first round of the 2017 presidential elections;%
+Arthaud;Percentage of votes cast for Mrs. Arthaud in the first round of the 2017 presidential elections;%
+Cheminade;Percentage of votes cast for Mr. Cheminade in the first round of the 2017 presidential elections;%
+Abstention2;Abstention rate in the second round of the 2017 presidential elections;%
+LePen2;Percentage of votes cast for Ms. Le Pen in the second round of the 2017 presidential election;%
+Macron2;Percentage of votes cast for Mr. Macron in the second round of the 2017 presidential election;%
