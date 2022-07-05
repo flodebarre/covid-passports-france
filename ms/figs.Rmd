@@ -151,8 +151,22 @@ supptab[iX, "predictor"] <- vapply(supptab[iX, "predictor"], FUN = function(x) s
 
 supptab
 
+# Add full text of the labels
+txt <- read.csv("../data/insee_labels_en.csv", sep = ";")
+names(txt) <- c("predictor", "description", "unit")
+# Remove "X" at start of name
+iX <- which(substr(txt$predictor, 1, 1) == "X") # Lines with "X"
+txt[iX, "predictor"] <- vapply(txt[iX, "predictor"], FUN = function(x) substr(x, 2, nchar(x)), FUN.VALUE = "x") # Remove "X" on these lines
+
+# Check that we have all labels
+all(is.element(supptab$predictor, txt$predictor))
+
+
+stb <- merge(supptab, txt, by = "predictor", all.x = TRUE)
+stb
+
 # Save as csv
-write.csv(supptab, file = "../ms/SuppTable_OR_wide.csv", row.names = FALSE)
+write.csv(stb, file = "../ms/SuppTable_OR_wide.csv", row.names = FALSE)
 
 ```
 
