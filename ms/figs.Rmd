@@ -161,9 +161,8 @@ txt[iX, "predictor"] <- vapply(txt[iX, "predictor"], FUN = function(x) substr(x,
 # Check that we have all labels
 all(is.element(supptab$predictor, txt$predictor))
 
-
+# Merge the tables to add the descriptions
 stb <- merge(supptab, txt, by = "predictor", all.x = TRUE)
-stb
 
 # Save as csv
 write.csv(stb, file = "../ms/SuppTable_OR_wide.csv", row.names = FALSE)
