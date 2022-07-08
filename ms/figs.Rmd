@@ -164,9 +164,25 @@ all(is.element(supptab$predictor, txt$predictor))
 # Merge the tables to add the descriptions
 stb <- merge(supptab, txt, by = "predictor", all.x = TRUE)
 
+
+#------------------------
+# Add median and N
+tmp <- read.csv("../data/insee_indicators_n_med_iqr_minmax.csv", sep = ";")
+names(tmp)[1] <- "predictor"
+# Remove "X" at start of name
+iX <- which(substr(tmp$predictor, 1, 1) == "X") # Lines with "X"
+tmp[iX, "predictor"] <- vapply(tmp[iX, "predictor"], FUN = function(x) substr(x, 2, nchar(x)), FUN.VALUE = "x") # Remove "X" on these lines
+# Check that we have all labels
+all(is.element(supptab$predictor, tmp$predictor))
+
+# Merge the tables to add the values
+stb <- merge(stb, tmp, by = "predictor", all.x = TRUE)
+# Reorder columns
+stb <- stb[, c(1, 2, 9, 10, 11, 12, 3:8)]
+
+
 # Save as csv
 write.csv(stb, file = "../ms/SuppTable_OR_wide.csv", row.names = FALSE)
-
 ```
 
 
